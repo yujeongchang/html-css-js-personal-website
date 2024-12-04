@@ -1,0 +1,511 @@
+/* GENERAL STYLING */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    background-color: #FAF9F6; /* 선택한 색상 코드 */
+    color: #333; /* 텍스트 가독성을 위한 대비 */
+}
+/* 타겟으로 만들고자 하는 element를 html 파일에 추가하고, "바로" css파일에서 각각을 의도한 디자인대로 스타일링하는구나. */
+/* [study purpose] Style everything as below*/ 
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+a, 
+.btn {
+    transition: all 300ms ease;
+}
+
+/*DESKTOP NAV*/
+nav, .nav-links {
+display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;     /* nav tag takes (always) 17% of the whole screen, screen size doesn't matter*/
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none; /*To remove the bullet points */
+    font-size: 1.5rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+/* target the links when we hover over them */
+a:hover {
+    color: grey;
+    text-decoration: underline;  
+    text-underline-offset: 1rem; /*text와 underline 사이의 간격*/
+    text-decoration-color: rgb(181, 181, 181);  /* color of the text-decoration */
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* HAMBURGER MENU */
+#hamburger-nav {
+    display: none;  /* when we are on desktop, the view of the hamburger menu is not showing up*/
+
+}
+
+.hamburger-menu {
+    position: relative;  /* ??? */
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;  /* 100% of its container */
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+/*????  줄 3개 햄버거 아이콘*/
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+}
+
+/* menu-lins 내의 a 태그들에 대해 스타일링 하는 것인가? 아니면 모든 a 태그를 함께 스타일링하는 것인가? */
+.menu-links a {
+    display: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+/* what's the point of this? */
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+/* first span element */
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+} 
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+} 
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -5px);
+} 
+
+.hamburger-icon span:first-child {
+    transform:none;
+}
+
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+    transform:none;
+}
+
+/* SECTIONS */
+ section  {
+    padding-top: 4vh;
+    height: 96vh;         /* together they make up a 100*/
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+ }
+
+ /* section-cintainer 클래스 없지 않나??*/
+ .section-container {
+    display: flex;
+ }
+
+ /* PROFILE SECTION */
+#profile {
+     display: flex;
+     justify-content: center;
+     gap: 5rem;
+     height: 80vh;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text_p1 {
+     text-align: center;
+}
+
+.section__text_p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem; 
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+.icon {
+    cursor: pointer;
+    height: 2.5rem;
+}
+
+/* BUTTONS */
+.btn-container {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, 
+.btn-color-2 {
+    border: rgb(53,53,53) 0.1rem solid; 
+}
+
+.btn-color-1:hover, 
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1, 
+.btn-color-2:hover {
+    background: rgb(53,53,53); 
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255,255,255) 0.1rem solid;
+}
+
+.btn-container {
+    gap: 1rem;
+}
+
+
+/* ABOUT SECTION */
+#about {
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+ .about-containers, 
+ .about-details-container {
+     display: flex;
+ }
+
+ .about-pic {
+    width: 350px; /* 원하는 너비로 설정 */
+    height: auto;
+    border-radius: 2rem;   
+    object-fit: cover; 
+ } 
+
+ .arrow {
+    position: absolute; 
+    right: -5rem;
+    bottom: 2.5rem;
+ }
+
+ .details-container {
+    padding: 1.5rem;
+    flex: 1;
+    /* background: white; */
+    background: rgb(250, 249, 246);
+    border-radius: 2rem;
+    border: rgb(53,53,53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align:  center;
+ }
+
+ .section-container {
+    gap: 4rem;
+    height: 80%;
+ }
+
+ .section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;  
+ }
+
+ .bold-text {
+    font-weight: bold;
+ }
+
+
+ /*EXPERIENCE SECTION*/
+
+ #experience {
+    position: relative;
+ }
+
+ .experience-sub-title {
+    color: rgb(85,85,85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+ }
+
+ .experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ .article-container {
+    display: flex;
+    text-align: initial; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+ } 
+
+ article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+ }
+
+ article .icon {
+     cursor: default;
+ }
+
+
+
+
+ /*수정된 EXPERIENCEE SECTION*/
+ .experience-section {
+    display: flex;
+    justify-content: space-between; /* 두 열을 양쪽으로 정렬 */
+    gap: 20px; /* 열 간격 */
+    margin-top: 30px; /* 섹션 상단 여백 */
+}
+
+/* 각 열 스타일 */
+.experience-column {
+    width: 45%; /* 두 열이 균등하게 배치 */
+}
+
+/* 카드 스타일 */
+.experience-card {
+    background-color: #f9f9f9; /* 카드 배경색 */
+    border: 1px solid #e0e0e0; /* 부드러운 테두리 */
+    border-radius: 8px; /* 둥근 모서리 */
+    padding: 15px; /* 내부 여백 */
+    margin-bottom: 20px; /* 카드 간격 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트 정렬 */
+    gap: 15px; /* 아이콘과 텍스트 간격 */
+}
+
+/* 이미지 아이콘 스타일 */
+.experience-card img {
+    width: 24px; /* 아이콘 크기 */
+    height: 24px;
+    display: inline-block;
+}
+
+/* 텍스트 스타일 */
+.experience-card .text {
+    font-size: 16px; /* 텍스트 크기 */
+    color: #333; /* 텍스트 색상 */
+}
+
+/* 제목 스타일 */
+.experience-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+ /*PROJECTS SECTION*/
+ #projects {
+     position: relative;
+ }
+
+ .color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 249, 246);
+ }
+
+ .project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+ }
+
+ .project-title {
+    margin: 1rem;
+    color: black;
+ }
+
+ .project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+ }
+
+
+ .info_text {
+    font-size: 0.75em; /* 글씨 크기를 기본 글씨보다 약간 작게 설정 */
+    font-style: italic; /* 이탤릭체 적용 */
+    color: #555; /* 텍스트 색상을 약간 연한 회색으로 설정 */
+    margin-top: 10px; /* 위 요소와 간격 추가 */
+    margin-bottom: 10px;
+    text-align: center; /* 텍스트를 중앙 정렬 */
+}
+
+ /*CONTACT*/
+
+ #contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    height: 70vh;
+ }
+
+ .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53,53,53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250); 
+    margin: 2rem auto;
+    padding: 0.5rem;
+ }
+
+ .contact-info-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.5rem;
+     margin: 1rem;
+ }
+
+ .contact-info-container p{
+    font-size: larger;
+ }
+
+ .contact-icon {
+    cursor: default;
+ }
+
+ .email-icon {
+    height: 3rem;
+ }
+
+
+ /*FOOTER SECTION*/
+
+ footer {
+    height: 26vh;
+    margin: 0 1rem;
+ }
+
+ footer p {
+    text-align: center;
+ }

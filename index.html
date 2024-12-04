@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yujeong's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Yujeong Chang</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Achievements/Contribution</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Yujeong Chang</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- actual links that are going to be opened when we open with this function toggleMenu()  -->
+            <div class="menu-links"> 
+                <li>
+                    <a href="#about" onclick="toggleMenu()">About</a>
+                </li>
+                <li>
+                    <a href="#experience" onclick="toggleMenu()">Experience</a>
+                </li>
+                <li>
+                    <a href="#projects" onclick="toggleMenu()">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="toggleMenu()">Contact</a>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/1000_profile_circled.png" alt="yujeong chang profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text_p1">Hi! I am</p>
+            <h1 class="title">Yujeong Chang</h1>
+            <p class="section__text_p2">Eager to innovate and make an impact through software engineering! 😊</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" 
+                        onclick="window.open('./assets/resumedraft.pdf')">
+                        Download CV
+                </button>
+                <button class="btn btn-color-1" 
+                        onclick="location.href='./#contact'">
+                        Contact Info
+                </button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" 
+                class="icon" onclick="location.href='https://www.linkedin.com/in/yujeongchang99/'">
+                <img src="./assets/github.png" alt="My GitHub Profile" 
+                class="icon" onclick="location.href='https://github.com/yujeongchang/'">
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text_p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+             <div class="section__pic-container">
+                <img src="./assets/profile_1.png" 
+                    alt="Profile Picture" 
+                    class="about-pic">
+             </div>
+             <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" 
+                        alt="Education  icon" 
+                        class="icon">
+                        <h3>Education </h3>
+                        <p>Bachelor of Science<br>(Ewha Womans University, 🇰🇷)<br>
+                            Open Learning Program<br>(Thompson Rivers University, 🇨🇦)</p>
+                     </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" 
+                        alt="Experience  icon" 
+                        class="icon">
+                        <h3>Initiatives</h3>
+                        <p>Seoul Tech Impact 2024<br>(Hackathon for social good) <br> 
+                        Angela Yu's 100 Days of Code<br>(Udemy python bootcamp) </p> 
+                    </div>
+                     
+                </div>
+                <div class="text-container ">
+                    <p>I hold a Bachelor’s degree in Biology with minor in Chemistry, where I developed a strong foundation in 
+                        scientific analysis and problem-solving. While exploring programming during my 
+                        academic journey, I discovered its potential to create impactful solutions and 
+                        decided to pursue Computer Science as a second degree. To prepare for this transition, I’ve completed advanced Java programming courses, 
+                        earning top grades, and am currently diving into Discrete Mathematics to strengthen 
+                        my skills further. 
+                    </p>
+                    <p class="bold-text">By combining my interdisciplinary background with technology, I aim to contribute 
+                        to innovative projects that foster inclusivity and drive societal progress!</p>
+                </div>
+             </div>
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="Arrow icon" 
+        class="icon arrow" 
+        onclick="location.href='./#experience'"
+        />
+
+    </section> 
+    <section id="experience">
+        <p class="section__text_p1">Explore My</p>
+        <h1 class="title">Achievements & Contributions</h1>
+        <div class="experience-details-container">
+
+            <div class="experience-section">
+                <!-- Skills 열 -->
+                <div class="experience-column">
+                  <h3 class="experience-title">Skills</h3>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Programming - Java, Python, HTML/CSS, JavaScript</div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Mathematics - Strong foundation in Discrete Mathematics, Probability & Statistics, Calculus1-2</div>
+                  </div>
+    
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Problem Solving - Logical reasoning and algorithmic thinking</div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Communication - Clear and concise written and verbal skills</div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Team Collaboration - Participated in a hackathon and led the team as a project manager</div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Excellent Time Management - Successfully balancing multiple online courses and projects</div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Highly self-motivated - Independently completed advanced programming courses and developed personal projects, including THIS personal website!</div>
+                  </div>
+                </div>
+              
+                <!-- Work/Volunteer 열 -->
+                <div class="experience-column">
+                  <h3 class="experience-title">Experiences</h3>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Natural History Museum - Managed marin specimen database especially for Urochordata as a student research assistant</div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Laboratory Experiences - Joined in three life science labs at Ewha W. Univ as an Undergraduate intern during my life at Ewha</div>
+                  </div>
+                  <!-- 더 많은 항목 추가 -->
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Center for Child Development and Disability - Mentored children with developmental disabilities as an assistant teacher (Volunteering) </div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Haeundae Children’s Care Center("다함께돌봄센터") - Mentored and taught python basic to the children of ages 6-12 (Volunteering) </div>
+                  </div>
+                  <div class="experience-card">
+                    <img src="./assets/checkmark.png" alt="Checkmark">
+                    <div class="text">Seoul Tech Impact 2024 - Took initiative in a non-profit hackathon, collaborating on innovative projects addressing environmental and social challenges. </div>
+                  </div>
+                </div>
+              </div>
+
+            <!-- <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Skills</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>HTML/CSS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Python</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Java</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Git/GitHub</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Mathematical Skills</h3>
+                                <p>Strong foundation in Discrete Mathematics, Statistics, Calculus</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Algorithmic Thinking</h3>
+                            </div>
+                        </article>
+
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Communication</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                               
+                                <h3>Teamwork</h3>
+                               
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Time Management</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Work/Volunteer</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Natural History Museum</h3>
+                                <p>Student Research Assistant</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Laboratory Experiences</h3>
+                                <p>Undergraduate research internships, multiple labs at Ewha</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Center for Child Development and Disability</h3>
+                                <p>Assistant Teacher, Volunteering</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
+                            <div>
+                                <h3>Haeundae Children’s Care Center </h3>
+                                <p>Teaching Mentor, Volunteering</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="Arrow icon" 
+        class="icon arrow" 
+        onclick="location.href='./#projects'"
+        />
+    </section>
+    <section id="projects">
+        <p class="section__text_p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img 
+                    src="./assets/bingoapp_img.png" 
+                    alt="Project 1"
+                    class="project-img"
+                    >
+                </div>
+                <h2 class="experience-sub-title project-title">Hackathon Project</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://devpost.com/software/bingo-s78zm1'">
+                        Project Info/<br>Contribution
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://seoultechimpact-aqoe.vercel.app/'">
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img 
+                    src="./assets/mypage.png" 
+                    alt="Project 2"
+                    class="project-img"
+                    >
+                </div>
+                <h2 class="experience-sub-title project-title">Personal Website</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">
+                        My very first homepage!
+                    </button>
+                </div>
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img 
+                    src="./assets/project3.png" 
+                    alt="Project 3"
+                    class="project-img"
+                    >
+                </div>
+                <h2 class="experience-sub-title project-title">✨Future Project✨</h2>
+                <p class="section__text_p1">Continuing my journey in Computer Science, I aim to bridge education gaps 
+                    by developing tools that support diverse learning needs, ensuring every child can thrive academically.</p>
+                <p class="info_text">This image is used as an example to illustrate the vision of the project, generated using DALL·E by OpenAI. </p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn">
+                        Future Project
+                    </button>
+                    <button class="btn btn-color-2 project-btn">
+                        Coming Soon!
+                    </button>
+                </div>
+            </div>
+        </div> 
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="Arrow icon" 
+        class="icon arrow" 
+        onclick="location.href='./#contact'"
+        />
+    </section>
+    <section id="contact">
+        <p class="section__text_p1">Get in Touch!</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img 
+                src="./assets/email.png " 
+                alt="Email icon"
+                class="icon contact-icon email-icon">  
+                <p><a href="mailto:hiyujeong0806@gmail.com">hiyujeong0806@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img 
+                src="./assets/linkedin.png " 
+                alt="LinkedIn icon"
+                class="icon contact-icon">  
+                <p><a href="https://www.linkedin.com/in/yujeongchang99/">LinkedIn</a></p>
+            </div> 
+        </div>
+
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Achievements/Contribution</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Yujeong Chang. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
